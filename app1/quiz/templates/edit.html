@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+{% block title %}Edit an Issue{% endblock %}
+{% block content %}
+
+
+<h1>Edit....</h1>
+<br/><br/>
+
+<div class="form-group">
+    <form  method="POST">
+        {% csrf_token %}
+        {{ from.as_p }}
+        <button class="btn btn-secondary">Update</button>
+        </form>
+    </div>    
+
+
+{% endblock %}    

@@ -1,0 +1,11 @@
+{% extends "home.html" %}
+{% block content %}
+<main class="container col-3 bg-light shadow-lg p-3 mb-5 bg-body rounded" style="margin-top:10%" >
+    <h2>Issue</h2>
+    <form method = "post"  enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit And send Email</button>
+    </form>
+    </main>
+{% endblock %}
